@@ -14,7 +14,7 @@ func main() {
 
 		w.Header().Add("X-Api-Key", "lorem_ipsum_dolor_amet")
 		w.WriteHeader(200)
-		w.Write([]byte(""))
+		w.Write([]byte("your remote address is " + r.RemoteAddr))
 	})
 	http.ListenAndServe(":8080", nil)
 }
